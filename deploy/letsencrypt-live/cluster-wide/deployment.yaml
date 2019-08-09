@@ -25,6 +25,14 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
+        # JA Bride:  Add resources
+        resources:
+          limits:
+            cpu: 300m
+            memory: 248Mi
+          requests:
+            cpu: 50m
+            memory: 64Mi
         env:
         - name: OPENSHIFT_ACME_EXPOSER_IP
           valueFrom:
